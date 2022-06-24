@@ -1,0 +1,10 @@
+
+body {
+    background-image: url('./pexels-felix-mittermeier-956999.jpg');
+    background-size: auto;
+    background-repeat: repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}

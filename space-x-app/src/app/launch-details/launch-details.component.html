@@ -1,0 +1,57 @@
+<div class="container">
+<h1>{{launch.name}}</h1>
+<div class="display">
+<img [src]="image" draggable="false" alt="Photo of rocket">
+
+</div>
+<div class="table-row">
+<table>
+    <tr>
+        <th>Company</th>
+        <th>Cost Per Launch ($)</th>
+        <th>Active?</th>
+        <th>Height</th>
+        <th>Mass (KG)</th>
+        <th>First Flight</th>
+        <th>Success Rate (%)</th>
+    </tr>
+    <tr>
+        <td>{{rocket.company}}</td>
+        <td>{{rocket.cost_per_launch}}</td>
+        <td>{{rocket.active}}</td>
+        <td>{{rocket?.height.meters}}</td>
+        <td>{{rocket.mass.kg}}</td>
+        <td>{{rocket.first_flight}}</td>
+        <td>{{rocket.success_rate_pct}}</td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <th>Crew?</th>
+       
+    </tr>
+    <tr >
+        <td>{{launch.crew}}</td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <th>customers</th>
+        <th>manufacturers</th>
+        <th>Payload Mass (KG)</th>
+        <th>Type</th>
+    </tr>
+    <tr>
+        <td>{{payload.customers}}</td>
+        <td>{{payload.manufacturers}}</td>
+        <td>{{payload.mass_kg}}</td>
+        <td>{{payload.type}}</td>
+    </tr>
+</table>
+</div>
+
+<app-countdown *ngIf="loaded" [launch_time]="launch.date_local!"></app-countdown>
+
+</div>

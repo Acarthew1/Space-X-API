@@ -1,0 +1,20 @@
+
+
+<div class="container">
+<mat-card  *ngFor="let launch of launches | slice:0:10; let i=index" class="example-card">
+    <mat-card-header>
+      <mat-card-title>{{launch.name}}</mat-card-title>
+      <mat-card-subtitle>{{getDate(launch)}}</mat-card-subtitle>
+      <mat-card-subtitle>Flight Number: {{launch.flight_number}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image [src]="rocket.flickr_images" draggable="false" alt="Photo of rocket">
+    <mat-card-content>
+      <P>
+        <app-countdown *ngIf="loaded" [launch_time]="launch.date_local!"></app-countdown>
+      </P>
+    </mat-card-content>
+    <mat-card-actions>
+      <a routerLink="launch-details/{{launch.id}}" >View Mission Details</a>
+    </mat-card-actions>
+  </mat-card>
+</div>
