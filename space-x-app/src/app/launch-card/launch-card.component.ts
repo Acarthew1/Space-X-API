@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {Observable} from "rxjs";
 import {HttpClient} from "@angular/common/http";
-import { ILaunches } from '../launches';
+import { ILaunches } from '../Interfaces/launches';
 import { LaunchesService } from '../services/launches.service';
-import { IRocket } from '../rocket';
+import { IRocket } from '../Interfaces/rocket';
 import { Router } from '@angular/router';
 import { CountdownComponent } from '../countdown/countdown.component';
 

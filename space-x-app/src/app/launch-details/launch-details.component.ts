@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Routes, Router, RouterModule, ActivatedRoute } from '@angular/router';
-import { ILaunches } from '../launches';
-import { IRocket } from '../rocket';
-import { IPayload } from '../payload';
+import { ILaunches } from '../Interfaces/launches';
+import { IRocket } from '../Interfaces/rocket';
+import { IPayload } from '../Interfaces/payload';
 import { LaunchesService } from '../services/launches.service';
 import { CountdownComponent } from '../countdown/countdown.component';
 
